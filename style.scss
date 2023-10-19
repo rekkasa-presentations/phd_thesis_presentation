@@ -1,0 +1,19 @@
+/*-- scss:defaults --*/
+
+$body-bg: #fff;
+$body-color: #fff;
+$link-color: #42affa;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+$font-family-sans-serif: Inter;
+/*-- scss:rules --*/
+
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.inline-fragment {
+  display: flex;
+}

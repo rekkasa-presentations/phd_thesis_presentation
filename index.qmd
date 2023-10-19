@@ -1,0 +1,92 @@
+---
+format:
+  revealjs:
+    width: 1920
+    height: 1080
+    transition: fade
+    theme: style.scss
+    fontsize: "60px"
+fontcolor: white
+---
+## {background-image="images/first-slide.png"}
+
+## Prediction {background-image="images/background.png"}
+\
+\
+\
+***How much time will it take me to drive to work?***
+
+
+## Prediction of healthcare outcomes {background-image="images/background.png"}
+\
+\
+
+> **Question:**
+>
+> *For a specific patient, how likely is it that they experience an outcome of interest?*
+
+\
+
+
+:::{.fragment}
+
+How likely is it for a patient with:
+
+- osteoporosis to experience a vertebral fracture?
+- COVID-19 to be transferred to the ICU ?
+
+:::
+
+## Prediction of benefit {background-image="images/background.png"}
+\
+\
+
+> **Question:**
+>
+> *For a specific patient, between treatment A and treatment B, which one is better?*
+
+## Prediction of benefit {background-image="images/background.png"}
+\
+\
+
+> **Problem:**
+>
+> *I can never observe what would have happened, had the patient received the alternative treatment.*
+
+
+## Prediction of benefit {background-image="images/background.png"}
+\
+\
+Thought process:
+\
+\
+
+
+[*Time machine*]{.fragment} [❯ *Cloning*]{.fragment} [❯ *Twin siblings*]{.fragment} [❯ *Similar patients*]{.fragment}
+
+
+
+## Prediction of benefit {background-image="images/background.png"}
+\
+\
+
+> **Question:**
+>
+> *What makes two patients similar?*
+
+## Literature review {background-image="images/background.png"}
+\
+\
+
+> **Aim 1:**
+>
+> *Systematically review the current literature on predictive approaches to
+> treatment effect heterogeneity.*
+
+
+## Prediction in healthcare {background-image="images/background.png"}
+
+![](images/cope.png){.absolute width="70%" left=0}
+
+![](images/nomogram.png){.absolute width="60%" right=0 bottom=0}
+
