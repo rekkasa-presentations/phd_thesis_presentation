@@ -6,9 +6,11 @@ format:
     transition: fade
     theme: style.scss
     fontsize: "60px"
-    slide-number: true
+    slide-number: false
+    menu: false
 fontcolor: white
 ---
+
 ## {background-image="images/first-slide.png"}
 
 ## Prediction {background-image="images/background.png"}
@@ -87,15 +89,13 @@ Thought process:
 > *Systematically review the current literature on predictive approaches to
 > treatment effect heterogeneity.*
 
-
 ## Literature review {background-image="images/background.png"}
 \
 \
 
-***Treatment effect modeling methods:*** 
+***Treatment effect modeling methods:***
 \
-Similiarity is based on risk factors and effect
-modfiers.
+Similiarity is based on risk factors and effect modfiers.
 
 \
 
@@ -110,6 +110,24 @@ Similarity is based solely on risk factors.
 Similarity is based solely on effect modifiers.
 
 
+## Literature review {background-image="images/background.png"}
+\
+\
+[***Treatment effect modeling methods:***]{.blare-text}
+\
+[Similiarity is based on risk factors and effect modfiers.]{.blare-text}
+
+\
+
+[***Risk-based methods:***]{.larger-font}
+\
+[Similarity is based solely on risk factors.]{.larger-font}
+
+\
+
+[***Optimal treatment regimes:***]{.blare-text}
+\
+[Similarity is based solely on effect modifiers.]{.blare-text}
 
 ## Risk-based methods {background-image="images/background.png"}
 \
@@ -140,10 +158,22 @@ Similarity is based solely on effect modifiers.
 > *Lack of syntactic and semantic interoperability between observational
 > databases.*
 
-## Standardized framework {background-image="images/background.png"}
-\
-\
 
+## Standardized framework {auto-animate=true background-image="images/background.png"}
+![](images/framework.png){fig-align="center"}
+
+## Standardized framework {auto-animate=true background-image="images/background.png"}
+::::{.columns}
+
+:::{.column width="50%"}
+![](images/framework.png){fig-align="center"}
+:::
+:::{.column width="50%"}
+![](images/framework-main.png){.absolute top=150 right=0 width="45%"}
+:::
+::::
+
+## Standardized framework {auto-animate=true background-image="images/background.png"}
 ::::{.columns}
 
 :::{.column width="50%"}
@@ -159,9 +189,25 @@ Similarity is based solely on effect modifiers.
 \
 \
 
-## Prediction in healthcare {background-image="images/background.png"}
+![](images/gusto.png){fig-align="center"}
+ 
+## Prediction in healthcare {auto-animate=true background-image="images/background.png"}
 
-![](images/cope.png){.absolute width="70%" left=0}
+![](images/cope.png)
 
-![](images/nomogram.png){.absolute width="60%" right=0 bottom=0}
 
+## Prediction in healthcare {auto-animate=true background-image="images/background.png"}
+
+![](images/cope.png){.absolute width="70%" left=0  .blare}
+
+![](images/nomogram.png){.absolute width="70%" right=0 bottom=0}
+
+## {background-image="images/last-slide.png"}
+\
+\
+\
+\
+
+:::{.thanks}
+Thank you!
+:::

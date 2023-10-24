@@ -21,3 +21,22 @@ $font-family-sans-serif: Inter;
 th, td {
     font-size: 0.7em;
   }
+
+.blare {
+    filter: blur(2px);
+  -webkit-filter: blur(8px); 
+}
+
+.blare-text {
+    color: transparent;
+	text-shadow: 0 0 20px #fff;
+}
+
+.larger-font{
+    font-size: 70px;
+}
+
+.thanks{
+    text-align: center;
+    font-size: 220px;
+}
