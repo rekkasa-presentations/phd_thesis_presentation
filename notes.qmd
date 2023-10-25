@@ -1,0 +1,42 @@
+---
+title: Presentation notes
+format:
+  pdf:
+   documentclass: article
+---
+
+# Presentation
+
+- Make sure to mention treatment effect heterogeneity before slide 8
+- Remove scalable or explain
+- Slide 9: Reverse order
+- Slide 16: Remove osteoporosis figure
+- Slide 16: Split the remaining figures in 2 slides
+- Slide 19: Move to start or remove?
+- Add short version of conclusions in the end
+
+
+# Defense questions
+
+- Table 6.1 -> Wrong!!
+- Literature review:
+  - Why limit to regression / RCT?
+  - Can OTRs be used for shared decision making?
+    - Cannot include patient preferences.
+    - ...
+  - Elaborate on the bias-variance tradeoff (robustness vs flexibility).
+  - Assumption of risk model cannot be true.
+- Framework:
+  - Develop one prediction model across all databases.
+  - Negative controls (explain how they work).
+  - Symmetric CIs for HRs -> Why?
+  - Figure 3.5 -> Error in color coding in caption.
+  - Why the "weak" conclusion? What would be required to be useful in practice?
+  - Treatment / Comparator / Outcome cohorts -> explain?
+  - Prediction on 1-1 patients -> why?
+  - Negative controls / PS density -> what is good?
+  - Competing risks / sensitivity to time horizon
+- Simulation:
+  - Why not use RCS-3 always?
+    Look at shiny app for 1065 patients.
+  - Why didn't you use penalization of the linear interaction / RCS?

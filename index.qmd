@@ -6,7 +6,7 @@ format:
     transition: fade
     theme: style.scss
     fontsize: "60px"
-    slide-number: false
+    slide-number: true
     menu: false
 fontcolor: white
 ---
@@ -36,10 +36,22 @@ fontcolor: white
 
 How likely is it for a patient with:
 
-- osteoporosis to experience a vertebral fracture?
-- COVID-19 to be transferred to the ICU ?
+- osteoporosis to experience a hip fracture?
+- COVID-19 to be admitted to the ICU ?
 
 :::
+
+## Prediction of healthcare outcomes {auto-animate=true background-image="images/background.png"}
+
+![](images/cope.png)
+
+
+## Prediction of healthcare outcomes {auto-animate=true background-image="images/background.png"}
+
+![](images/cope.png){.absolute width="70%" left=0  .blare}
+
+![](images/nomogram.png){.absolute width="70%" right=0 bottom=0}
+
 
 ## Prediction of benefit {background-image="images/background.png"}
 \
@@ -47,8 +59,7 @@ How likely is it for a patient with:
 
 > **Question:**
 >
-> *For a specific patient, between treatment A and treatment B, which one is
-> better?*
+> *For a specific patient, is treatment A better or treatment B?*
 
 ## Prediction of benefit {background-image="images/background.png"}
 \
@@ -93,35 +104,38 @@ Thought process:
 \
 \
 
-***Treatment effect modeling methods:***
-\
-Similiarity is based on risk factors and effect modfiers.
-
-\
-
+:::{.fragment}
 ***Risk-based methods:***
 \
 Similarity is based solely on risk factors.
+:::
+
+:::{.fragment}
+\
+***Treatment effect modeling methods:***
+\
+Similiarity is based on risk factors and effect modifiers.
 
 \
-
+:::
+:::{.fragment}
 ***Optimal treatment regimes:***
 \
 Similarity is based solely on effect modifiers.
-
+:::
 
 ## Literature review {background-image="images/background.png"}
 \
-\
-[***Treatment effect modeling methods:***]{.blare-text}
-\
-[Similiarity is based on risk factors and effect modfiers.]{.blare-text}
-
 \
 
 [***Risk-based methods:***]{.larger-font}
 \
 [Similarity is based solely on risk factors.]{.larger-font}
+
+\
+[***Treatment effect modeling methods:***]{.blare-text}
+\
+[Similiarity is based on risk factors and effect modfiers.]{.blare-text}
 
 \
 
@@ -135,8 +149,8 @@ Similarity is based solely on effect modifiers.
 
 > **Aim 2:**
 >
-> *Develop scalable and reproducible risk-based predictive approaches to the
-> assessment of treatment effect heterogeneity.*
+> *Develop scalable risk-based predictive approaches to the assessment of
+> treatment effect heterogeneity.*
 
 ## Observational setting {background-image="images/background.png"}
 \
@@ -155,35 +169,18 @@ Similarity is based solely on effect modifiers.
 
 > **Problem:**
 >
-> *Lack of syntactic and semantic interoperability between observational
-> databases.*
+> *Lack of interoperability between observational databases.*
+
+## Standardized framework {auto-animate=true background-image="images/background.png"}
+
+![](images/framework.png){fig-align="center"}
 
 
 ## Standardized framework {auto-animate=true background-image="images/background.png"}
-![](images/framework.png){fig-align="center"}
 
-## Standardized framework {auto-animate=true background-image="images/background.png"}
-::::{.columns}
+![](images/framework-main.png){.absolute fig.align="center"}
 
-:::{.column width="50%"}
-![](images/framework.png){fig-align="center"}
-:::
-:::{.column width="50%"}
-![](images/framework-main.png){.absolute top=150 right=0 width="45%"}
-:::
-::::
 
-## Standardized framework {auto-animate=true background-image="images/background.png"}
-::::{.columns}
-
-:::{.column width="50%"}
-![](images/framework.png){fig-align="center"}
-:::
-:::{.column width="50%"}
-![](images/framework-main.png){.absolute top=150 right=0 width="45%"}
-![](images/osteoporosis.png){.absolute bottom=-20 right=0 width="45%"}
-:::
-::::
 
 ## Continuous benefit prediction {background-image="images/background.png"}
 \
@@ -191,16 +188,7 @@ Similarity is based solely on effect modifiers.
 
 ![](images/gusto.png){fig-align="center"}
  
-## Prediction in healthcare {auto-animate=true background-image="images/background.png"}
-
-![](images/cope.png)
-
-
-## Prediction in healthcare {auto-animate=true background-image="images/background.png"}
-
-![](images/cope.png){.absolute width="70%" left=0  .blare}
-
-![](images/nomogram.png){.absolute width="70%" right=0 bottom=0}
+## Future research {auto-animate=true background-image="images/background.png"}
 
 ## {background-image="images/last-slide.png"}
 \
