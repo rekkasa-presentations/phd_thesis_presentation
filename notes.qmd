@@ -28,7 +28,11 @@ format:
   - Assumption of risk model cannot be true.
 - Framework:
   - Develop one prediction model across all databases.
-  - Negative controls (explain how they work).
+  - Negative controls (explain how they work). \
+    See:
+    [p-value calibration](https://onlinelibrary.wiley.com/doi/epdf/10.1002/sim.5925),
+    [CI calibration](https://www.pnas.org/doi/epdf/10.1073/pnas.1708282114),
+    [ease](https://onlinelibrary.wiley.com/doi/epdf/10.1002/pds.5510)
   - Symmetric CIs for HRs -> Why?
   - Figure 3.5 -> Error in color coding in caption.
   - Why the "weak" conclusion? What would be required to be useful in practice?
@@ -36,6 +40,7 @@ format:
   - Prediction on 1-1 patients -> why?
   - Negative controls / PS density -> what is good?
   - Competing risks / sensitivity to time horizon
+  - Figure 3.2: How were the percentages calculated?
 - Simulation:
   - Why not use RCS-3 always?
     Look at shiny app for 1065 patients.
