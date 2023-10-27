@@ -24,13 +24,15 @@ this talk from the notion of risk and its prediction.
 
 The notion of prediction is present in everyone's life, especially whenever a
 decision has to be made. "Should I go for spicy food for dinner tonight?" or
-"should I "
+"should I watch another youtube video before I go to bed"? To answer these
+questions, we use information from our past, or at least that's what we should
+do anyway.
 
-One decision I face every day is: "What time should I leave home for work?". To
-make this decsion I need to predict: "How much time will it take me to drive to
-work"? This depends on many factors. For example, what day is it? Is it Tuesday
-or Thursday? What time is it? Is it rush hour? What's the weather like? Is it
-raining? Probably it's raining.
+One decision I face every day is: "What time should I leave home for work to be
+there on time?". To make this decsion I need to predict: "How much time will it
+take me to drive to work"? This depends on many factors. For example, what day
+is it? Is it Tuesday or Thursday? What time is it? Is it rush hour? What's the
+weather like? Is it raining? Probably it's raining.
 
 \newpage
 
@@ -48,28 +50,21 @@ In this case, as making the right decision is crucial and the consequences of a
 wrong decision can be severe, we need to use a more elaborate approach for our
 predictions. This often quite complex process is called prediction modeling and
 its aim is to develop a rule that relates the outcome we are trying to avoid to
-patient characteristics.
-
-For example, in the case of covid-19 we would need to gather all the patients
-who present at the emergency room with a covid-19 diagnosis and record all their
-measurements: age, body temperature etc. Then we would follow them for a certain
-period, say a month, and record if during this time they were admitted to the
-intensive care unit. Finally, we would use some method to relate characteristics
-like age and body temperature to a patient's likelihood of ending up in the
-ICU. As, you can imagine we would expect older patients or patients with higher
-body temperature to end up in the ICU more often.
+patient characteristics that were known to us at the moment the decision needed
+to be made. It attempts to define a more systematic way for evaluating the
+likelihood of future outcomes using the experience from past.
 
 \newpage
 
 # Slide 4
 
-And this is similar to what we did in chapter 6 of my thesis. We developed a
-model for the prediction of patient's likelihood of dying or ending up in the
-ICU within a month from being admitted to hospital with confirmed covid-19. We
-also developed an online calculator to be used by clinicians that looked like
-the one in this picture, where the doctors could input some of the patient's
-measurements at the time of admission and it would return their probabilities of
-dying or needing intensive care treatment.
+For example, in chapter 6 of my thesis we developed a model for the prediction
+of a patient's likelihood of dying or being admitted to the ICU within 28 days
+from being admitted to hospital with suspected covid-19. We also developed an
+online calculator to be used by clinicians that looked like the one in this
+picture, where the doctors could input some of the patient's measurements at the
+time of admission and it would return their probabilities of dying or needing
+intensive care treatment.
 
 \newpage
 
@@ -89,7 +84,9 @@ a female younger patient.
 However, when we attempt to develop this model the same way we have presented so
 far, we run into a problem. In the case of covid-19 and admission to the ICU, we
 know for every patient in our data whether they actually ended up in the ICU or
-not. That is not the case when we are comparing treatments.
+not. This allows us to explore the relationship of this outcome with certain
+patient characteristics. Howerve, that is not the case when we are comparing
+treatments.
 
 \newpage
 
@@ -102,7 +99,7 @@ cannot know if the the decision to give the patient treatment A was the correct
 one.
 
 But what would then be the appropriate approach for predicting the patient's
-benefit?
+benefit with treatment A compared to treatment B?
 
 \newpage
 
@@ -149,15 +146,14 @@ But, what about the original patient for whom we needed to make the decision?
 One approach would be to say, that since on average treatment A is better, give
 the patient treatment A. But can we expect that these treatments work the same
 for all people? Should we maybe expect that for some people, treatment B might
-work better or maybe it works the same as treatment A?
+work better or maybe for some people both treatments work equally well.
 
 That is actually often anticipated and we often use the term treatment effect
-heterogeneity to describe this non-random variability of treatment effects
-across the population we are studying. That's why even when researchers design
-clinical trials, they take into account that they should look into more specific
-groups of people. For example, in addition to the average effect, they also
-compare the treatment effects between males and females. Or older and younger
-patients.
+heterogeneity to describe this non-random variability of patients' responses to
+treatment. That's why even when researchers design clinical trials, they take
+into account that they should look into more specific groups of people. For
+example, in addition to the average effect, they also compare the treatment
+effects between males and females. Or older and younger patients.
 
 But how do you come up with these groups? When you decide to compare the two
 treatments in male and female patients, you silently assume that male patients
@@ -183,10 +179,6 @@ infarction from the example earlier?
 
 And there are many different methods that have been suggested over the years by
 other researchers that can be used to answer this question.
-
-\newpage
-
-# Slide 9
 
 So, as the first aim of this dissertation, we decided to categorize methods
 available in the literature for the prediction of benefit based on their
@@ -271,3 +263,70 @@ scalable.
 \newpage
 
 # Slide 14
+
+And that brings us to the first project we carried out for aim number 2, the
+definition of standardized framework for assessing the evolution of treatment
+effects with increasing risk for an outcome we are trying to prevent in this
+kind of real world data. This framework consisted of five steps. In the first
+step, we come up with definitions of what is treatment A, what is treatment B,
+what is the outcome of interest? For example, what do I need to see in the data
+to say that a specific patient had an acute myocardial infarction?
+
+After deriving these definitions I can send them to databases using the common
+data model and extract the patients I need.
+
+In the third step, need to develop models for the prediction of the outcome of
+interest, in this example, acute myocardial infarction. Once I have this
+prediction models, I can split my patients into groups of predicted risk. For
+example, in the first group I have patients with below 1% chance of having, in
+the second group I have patients between 1% and 1.5% risk and so on.
+
+Once I have created these groups, in each of them I can compare treatment A with
+treatment B using also methods that solve the fact that patients don't receive
+treatment randomly. And in the final step, we combine the results and summarize.
+
+\newpage
+
+# Slide 15
+
+Because all these may sound a bit abstract I have included the results of one of
+our studies that compared thiazide diuretics with angiotensin converting enzyme
+inhibitors for the treatment of hypertension. 
+
+On the horizontal axis we have the predicted acute MI risk, so as we move from
+the left to the right we have patients at higher risk of having an acute MI. On
+the vertical axis, we have the absolute risk reduction, is essentially the
+benefit we predict for taking thiazide compared to an ACE inhibitor. I use a
+different color for each database we included, so three of them in total.
+
+The important thing to see here is that this increasing trend for the benefits
+we predict as the risk goes up. This means that thiazides get increasingly
+better compared to ACE inhibitors as the risk increases for the prevention of
+acute MI. Same thing but not so strong in the case of hospitalization with heart
+failure and no difference for the prevention of stroke.
+
+\newpage
+
+# Slide 16
+
+Even though, the previous method provides us with an answer regarding the
+treatment that should be given to a patient based on their baseline, it however
+makes, among others, a strong assumption: That patients in the same risk group
+are similar enough to assume that their response to treatment is the
+same. However, patients in each group have different likelihood of the outcome
+we are interested in and therefore, the effect that we find is still an average
+of the effects of people with similar but not the same risk.
+
+Therefore, a logical next step is to look for methods that assign the same
+expected treatment benefits to patients at the same risk for the outcome of
+interest. These methods, however, are more complicated to develop and therefore,
+as a first step we decided to go back to the clinical trial setting, where
+treatment is assigned at random.
+
+I will not go into depth about the methods we considered, as this could take
+some time. However, I will show you in this figure what our results look
+like. 
+
+So in this case, we again have risk on the horizontal axis and predicted benefit
+on the vertical axis. But in this case, we see that we have continuous lines as
+opposed to single points from the previous graph.
