@@ -39,7 +39,8 @@ format:
   - Treatment / Comparator / Outcome cohorts -> explain?
   - Prediction on 1-1 patients -> why?
   - Negative controls / PS density -> what is good?
-  - Competing risks / sensitivity to time horizon
+  - Competing risks / sensitivity to time horizon \
+    Time horizon see: [Restricted mean survival](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-13-152)
   - Figure 3.2: How were the percentages calculated?
 - Simulation:
   - Why not use RCS-3 always?
