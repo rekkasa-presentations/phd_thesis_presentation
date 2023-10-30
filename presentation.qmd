@@ -3,7 +3,7 @@ title: Presentation
 format:
   pdf:
     fontfamily: helvet
-    fontsize: 20pt
+    fontsize: 18pt
     papersize: a4
 ---
 
@@ -11,28 +11,26 @@ format:
 
 Committee members, colleagues, friends and family,
 
-I would like to thank you all for attending my presentation here today. The
-title of my thesis is "Beyond the average treatment effect: Risk-based
-approaches to medical decision making".
+I would like to thank you all for attending my presentation here today. I will
+be defending my thesis with title "Beyond the average treatment effect:
+Risk-based approaches to medical decision making".
 
 \newpage
 
 # Slide 2
 
 Since we are looking at "risk-based" approaches it is important that I start
-this talk from the notion of risk and its prediction.
+this talk from the elaborating on risk and its prediction.
 
 The notion of prediction is present in everyone's life, especially whenever a
-decision has to be made. "Should I go for spicy food for dinner tonight?" or
-"should I watch another youtube video before I go to bed"? To answer these
-questions, we use information from our past, or at least that's what we should
-do anyway.
-
-One decision I face every day is: "What time should I leave home for work to be
-there on time?". To make this decsion I need to predict: "How much time will it
-take me to drive to work"? This depends on many factors. For example, what day
-is it? Is it Tuesday or Thursday? What time is it? Is it rush hour? What's the
-weather like? Is it raining? Probably it's raining.
+decision has to be made. For example, I leave around 50 kilometers away from
+hospital in Rotterdam and I have to use some roads with quite heavy traffic. So,
+every day I need to decide: "What time should I leave home for work to be there
+on time?". To make this decsion I need to predict: "How much time will it take
+me to drive to work"? From my experience, this depends on many factors. For
+example, what day is it?  Is it Tuesday or Thursday? These days, trafffic seems
+to be way worse than other days. What time is it? Is it rush hour?  What's the
+weather like? Is it raining? Probably it's raining, but you know what I mean.
 
 \newpage
 
@@ -43,16 +41,17 @@ often asked is: "for a specific patient, how likely is it that they experience
 an outcome of interest"?
 
 For example, for a patient with hypertension, how likely is that they experience
-an acute myocardial infarction? Or, for a patient with covid-19, how likely is
+an heart attack? Or, for a patient with covid-19, how likely is
 it that they are admitted to the intensive care unit?
 
 In this case, as making the right decision is crucial and the consequences of a
 wrong decision can be severe, we need to use a more elaborate approach for our
-predictions. This often quite complex process is called prediction modeling and
-its aim is to develop a rule that relates the outcome we are trying to avoid to
-patient characteristics that were known to us at the moment the decision needed
-to be made. It attempts to define a more systematic way for evaluating the
-likelihood of future outcomes using the experience from past.
+predictions. This process, which can often be quite complex, is called
+prediction modeling and its aim is to develop a clearly defined rule that
+relates an outcome to patient characteristics that were known to us at the
+moment the decision needed to be made. It attempts to define a more systematic
+way for evaluating the likelihood of future outcomes using the experience from
+past.
 
 \newpage
 
@@ -72,21 +71,16 @@ intensive care treatment.
 
 Now, all this is definitely helpful if you want to know which patient you should
 be paying closer attention to. However, a physician, needs to be able to propose
-a course of treatment for the patient sitting in front them. So very often, the
-question a doctor has to ask is: "For a specific patient, is treatment A better
-or treatment B"?
+a course of treatment for the patient sitting in front them. This means that,
+very often, the question a doctor needs to answer is: "For a specific patient,
+is treatment A better or treatment B"?
 
-So, it would be great if we could develop a model to answer this exact
-question. For example, for a male 70-year old patient with hypertension
-treatment A would be better for him. However, the reverse would be the case for
-a female younger patient.
-
-However, when we attempt to develop this model the same way we have presented so
-far, we run into a problem. In the case of covid-19 and admission to the ICU, we
-know for every patient in our data whether they actually ended up in the ICU or
-not. This allows us to explore the relationship of this outcome with certain
-patient characteristics. Howerve, that is not the case when we are comparing
-treatments.
+However, when we attempt to develop a model for this prediction problem the same
+way we have presented so far, we run into a problem. In the case of covid-19 and
+admission to the ICU, we know for every patient in our data whether they
+actually ended up in the ICU or not. This allows us to explore the relationship
+of the ICU admission with certain patient characteristics. However, that is not
+the case when we are comparing treatments.
 
 \newpage
 
@@ -107,30 +101,31 @@ benefit with treatment A compared to treatment B?
 
 Let's follow a thought process starting from science fiction and ending to what
 is really done in practice. Let's say we wanted to define a model for the
-prediction of benefit of treatment A compared to treatment B using the data from
-a sample of people that we can recruit for our study.
+prediction of benefit with treatment A compared to treatment B. And we want to
+develop this model on a large set of patients we have recruited.
 
 Ideally, in order to observe the patient's response to both treatments we would
 first need to give them treatment A, follow them for a specific amount of time
 and record what happened to them. Then, put them in a time machine, send them
-back in time to the moment of the decision, but now give them treatment
-B. Follow them up for the same amount of time and record their response. At this
-point we have the outcomes for both treatment decisions and we can say with
-certainty that treatment A or B was better for this patient. Then, we do the
-same thing for all the patients in our sample and now our data is complete. We
-can finally build a model that relates the observed responses of our patients to
-their characteristics. And then, we can use this model on any new patient that
-we come across to decide whether to give them treatment A or treatment B. Even
-though, I don't know how useful such a model would be, given that you have a
-time machine available, anyway.
+back in time to the moment of the decision, but now give them treatment B,
+instead. Follow them up for the same amount of time and record their
+response. At this point we would have the outcomes for both treatment decisions
+and we could say with certainty that treatment A or B was better for this
+patient. Then, we would do the same thing for all the patients we had recruited
+and now our data would be complete. We could finally build a model that relates
+the observed responses of our patients to their characteristics. And then, we
+could use this model on any new patient that we would come across to decide
+whether to give them treatment A or treatment B. Even though, I don't know how
+useful such a model would be, given that you have a time machine available,
+anyway.
 
 Since time travel is not an option, we could say that next best thing would be
 to clone the patient, give each person a different treatment, follow them up for
 a period of time, and then see which version of the patient did better.
 
 Even though, this is not permitted, there have been studies that used twin
-siblings for this kind of question. Of course they are very limited, as you can
-imagine.
+siblings to answer this kind of question. Of course they are very limited, as
+you can imagine.
 
 Finally, the next best thing, is to see what happened to patients similar to the
 patient in question. This is the idea in clinical trials, where patients are
@@ -146,7 +141,7 @@ But, what about the original patient for whom we needed to make the decision?
 One approach would be to say, that since on average treatment A is better, give
 the patient treatment A. But can we expect that these treatments work the same
 for all people? Should we maybe expect that for some people, treatment B might
-work better or maybe for some people both treatments work equally well.
+work better or maybe for some people both treatments work equally well?
 
 That is actually often anticipated and we often use the term treatment effect
 heterogeneity to describe this non-random variability of patients' responses to
@@ -167,46 +162,47 @@ our hands.
 
 # Slide 8
 
-What makes two patients similar? And more specifically, what makes two patients
+What makes two patients similar? More specifically, what makes two patients
 similiar for us to assume that their response to the treatments in question will
 be the same? For any two patients we can always find many characteristics that
 make them similar and many more that make them different. How do we proceed, in
 a more standardized manner, to identify such characteristics and ultimately
 answer our question: What is the predicted benefit for a specific patient if I
 give them treatment A compared to treatment B? How much will treatment A reduce
-a specific patient's likelihood of having a bad outcome, like acute myocardial
-infarction from the example earlier?
+a specific patient's likelihood of having a bad outcome, like a heart attack
+from the example earlier, compared to treatment B?
 
-And there are many different methods that have been suggested over the years by
-other researchers that can be used to answer this question.
-
-So, as the first aim of this dissertation, we decided to categorize methods
-available in the literature for the prediction of benefit based on their
-definition of patient similarity.
+As the first aim of this thesis, it made sense to search the literature for
+existing methods for the prediction of benefit and divide them into categories
+based on how they defined patient similarity.
 
 \newpage
 
 # Slide 10
 
+**TODO:** Make slide only about risk-based methods\
+
 We identified two large groups of methods.
 
 Risk-based methods define similarity based solely on risk factors. Going back to
 the hypertension example, this would mean that these methods assume that
-patients at the same risk for acute myocardial infarction are expected to
+patients at the same risk for heart attack are expected to
 experience the same effect from a treatment targeted to their disease.
 
-Treatment effect modeling methods define similarity on risk factors and effect
-modifiers. We call effect modifiers certain patient characteristics that are
-capable of altering how effective a treatment will be for a patient. So, it
-looks that this group of methods may make a lot of sense to focus on since, they
-not only require patients to be at the same risk for the outcome we are trying
-to prevent but also require them to interact with treatment in the same
-way. There is, however, an important problem. These characteristics that modify
-treatment are not always known or they can be so many making very hard to for us
-to put in a model.
+<!--
+Treatment effect modeling methods define similarity on risk factors and, so
+called, effect modifiers. Effect modifiers are certain patient characteristics
+that are capable of altering how effective a treatment will be for a
+patient. So, it seems that this group of methods may make a lot of sense to
+focus on since, they not only require patients to be at the same risk for the
+outcome we are trying to prevent but also require them to interact with
+treatment in the same way. There is, however, an important problem. These
+characteristics are not always known or they can be so many making very hard to
+for us to put in a model.
 
 Therefore, as the subtitle of this thesis says, we will focus on risk-based
 methods.
+-->
 
 \newpage
 
@@ -217,44 +213,56 @@ approaches to the assessment of treatment effect heterogeneity.
 
 But, first, a short introduction is required. For the entirety of my PhD we were
 very lucky to have access to data of millions of patients, mainly from the US
-and Europe for our experiments. This data was not collected from any clinical
-trials, but rather it was data that health insurance companies collect for their
-customers, or data that hospitals collect for their patients. This means that
-our data came from what we call the real world as opposed to data from clinical
-trials, where the setting is very tightly controlled.
+and Europe for our experiments. This data did not come from clinical trials, but
+rather, it was data collected from patients interacting with the healthcare
+system. For example we had access to data that health insurance companies
+collect for their insured patients, or that hospitals collect from patients they
+treat. We often call this information real-world data as opposed to data from
+clinical trials, where the setting is very tightly controlled.
 
 This is both a blessing, and a curse. It's a blessing because we can analyze
-data of millions of people. However, it is also a curse, because randomization
-that is the key feature for easily achieving patient similarity is now gone.
+data of millions of people. This allows us to explore relationships between
+treatments and patient characteristics in often a lot more depth, compared to
+what we could do with clinical trials, where sample sizes are often limited.
 
-Since this is "real world data", it means that we get to see patients treated by
-physicians that, hopefully, use some evidence to decide whether to give
-treatment A or treatment B and don't rely on a coin flip.
+However, there are also several issues that arise from this type of
+data. Randomization which was key for easily achieving patient similarity is now
+gone. Since this is "real world data", it means that we get to see patients
+treated by physicians that, have reason to believe that using treatment A on a
+certain patient will be better for them compared to treatment B. Hopefully, they
+don't simply rely on the flip of a coin to make that suggestion.
 
 \newpage
 
 # Slide 12
 
-This creates the problem that patients receiving different treatments tend to be
-systematically different and now it is very hard for us to compare. But not
-impossible. Not always, anyway. There are methods that we can use to make
-patients receiving different treatments more similar and thus achieve a setup
-closer to a clinical trial that used randomization.
+Howerver, for us, this creates the problem. Patients receiving different
+treatments tend to be systematically different. This makes comparisons a lot
+more challenging. But not impossible. Not always, anyway. There are methods that
+we can use to make patients receiving different treatments more similar and thus
+achieve a setup closer to a clinical trial that used randomization.
 
 \newpage
 
 # Slide 13
 
-However, there is another problem and that is the lack of interoperability
-between observational databases. That is a more elegant way of saying that any
-database of this kind, tends to use its own way of storing patient data, and
-therefore if I want to use multiple of these databases, I will need to redesign
-my analysis every time. Luckily, we avoided this problem by using a common data
-model called OMOP. As a concept it's similar to the fact that here today many of
-us speak different languages, however you can all understand what I am
+And that is not all. Our aim was to develop scalable methods, that is develop
+methods that can be applied across different databases.
+
+However there is, unfortunately another problem with this type of data. That is,
+the lack of interoperability between observational databases. In simple words,
+each database of this kind, tends to use its own way of storing patient data,
+and, therefore, if I want to use multiple of these databases, I will need to
+redesign my analysis every time, to be able to speak at its of the databases I
+have access to.
+
+Luckily, we were able to avoid this problem by using what is the OMOP common
+data model. Without going into much detail, we can think of a common data model
+similar to what is happening in this room at this moment. There are many of us
+speaking different languages, however you can all understand what I am
 saying. Hopefully. The common data model sits on top of all our databases and
-acts as sort of translator. We only need to speak to it and it will take care of
-the rest.
+acts as sort of a translator. We only need to speak to it and it will take care
+of the rest.
 
 This is very important. Now I can use the same design and apply it in the
 Netherlands, the US, S. Korea and so on. This allows my methods to become
@@ -264,69 +272,108 @@ scalable.
 
 # Slide 14
 
-And that brings us to the first project we carried out for aim number 2, the
-definition of standardized framework for assessing the evolution of treatment
-effects with increasing risk for an outcome we are trying to prevent in this
-kind of real world data. This framework consisted of five steps. In the first
-step, we come up with definitions of what is treatment A, what is treatment B,
-what is the outcome of interest? For example, what do I need to see in the data
-to say that a specific patient had an acute myocardial infarction?
+Now, since we have resolved the previous problems, we can proceed with the
+definition of a standardized framework for risk-based evaluation of treatment
+effect heterogeneity. That is, come up with a clearly defined approach to
+describe how differences between two or more treatments change with increasing
+risk for a specific outcome of interest. For example, say that treatment A works
+better than treatment B in patients at high risk for heart attack, but for low
+risk patients, both treatments work equally well.
 
-After deriving these definitions I can send them to databases using the common
-data model and extract the patients I need.
+This framework consists of five steps. In the first step, we come up with
+definitions of what is treatment A, what is treatment B, what is the outcome of
+interest? For example, what do I need to see in the data to say that a specific
+patient had an heart attack? However, I have to make sure that my
+definitions are created in such a way, so that they can be understood from the
+OMOP common data model, our translator.
 
-In the third step, need to develop models for the prediction of the outcome of
-interest, in this example, acute myocardial infarction. Once I have this
-prediction models, I can split my patients into groups of predicted risk. For
-example, in the first group I have patients with below 1% chance of having, in
-the second group I have patients between 1% and 1.5% risk and so on.
+Then, I can send them to databases using the common data model and extract the
+patients I need.
 
-Once I have created these groups, in each of them I can compare treatment A with
-treatment B using also methods that solve the fact that patients don't receive
-treatment randomly. And in the final step, we combine the results and summarize.
+Once I have my data, I can proceed with developing models for the prediction of
+the outcome of interest. Let's say in this example I am interested to see how
+treatment A and treatment B compare for the prevention of heart attack. So I
+develop models for the prediction of heart attack risk.
+
+Once I have these prediction models, I can split my patients into groups of
+predicted risk, from lower to higher. For example, in the first group I have
+patients with below 1% chance of having a heart attack, in the second
+group I have patients between 1% and 1.5% risk and so on.
+
+Then, I can go into each of these groups and compare treatment A to treatment B
+and see how well they perform.
+
+In the final step, I can combine all the results from the different databases,
+to get a better view of how these treatments compare.
 
 \newpage
 
 # Slide 15
 
 Because all these may sound a bit abstract I have included the results of one of
-our studies that compared thiazide diuretics with angiotensin converting enzyme
-inhibitors for the treatment of hypertension. 
+our studies, presented in chapter 3 of my thesis. In this case I am comparing
+two treatments, thiazide diuretics and angiotensin converting enzyme inhibitors
+for the treatment of hypertension.
 
-On the horizontal axis we have the predicted acute MI risk, so as we move from
-the left to the right we have patients at higher risk of having an acute MI. On
-the vertical axis, we have the absolute risk reduction, is essentially the
-benefit we predict for taking thiazide compared to an ACE inhibitor. I use a
-different color for each database we included, so three of them in total.
+Without going into much detail, let's focus on the picture on the left. On the
+horizontal axis we show heart attack risk. So, as we move from the left to the
+right we see what happens to patients with higher chances of having a heart
+attack. On the vertical axis we have the absolute risk reduction, or in more
+simple terms, how much better are thiazide diuretics compared to angiotensin
+converting enzyme inhibitors. So, the more we move upwards, the better thiazide
+diuretics are for the prevention of a heart attack. Now each color on the plot
+represents a different database we ran our analysis.
 
-The important thing to see here is that this increasing trend for the benefits
-we predict as the risk goes up. This means that thiazides get increasingly
-better compared to ACE inhibitors as the risk increases for the prevention of
-acute MI. Same thing but not so strong in the case of hospitalization with heart
-failure and no difference for the prevention of stroke.
+The important thing to see here is that as we go from the left to right the
+points tend to move upwards. As risk of heart attack increases,
+thiazide diuretics tend to do better than angiotensin converting enzyme
+inhibitors.
+
+In the second picture, we see a similar trend but not as clear as before. This
+is how our two treatments compare for the prevention of requiring
+hospitalization with heart failure.
+
+Finally, in the last picture we have stroke. Here we see that the two treatments
+are almost the same.
+
 
 \newpage
 
 # Slide 16
 
-Even though, the previous method provides us with an answer regarding the
-treatment that should be given to a patient based on their baseline, it however
-makes, among others, a strong assumption: That patients in the same risk group
-are similar enough to assume that their response to treatment is the
-same. However, patients in each group have different likelihood of the outcome
-we are interested in and therefore, the effect that we find is still an average
-of the effects of people with similar but not the same risk.
+Now, even though the previous method shows us how two treatments compare in
+patients with different risks, it does not directly provide us with an answer to
+our original question. For a specific patient, which of the two treatments is
+better? Or, to make it a bit more specific, for a patient with a specific risk
+prediction, which of the two treatments is better?
 
-Therefore, a logical next step is to look for methods that assign the same
-expected treatment benefits to patients at the same risk for the outcome of
-interest. These methods, however, are more complicated to develop and therefore,
-as a first step we decided to go back to the clinical trial setting, where
-treatment is assigned at random.
+In the previous approach, we were still dealing with patient groups. Our
+specific patient, based on their predicted risk, would fall into one of the risk
+groups we defined and, then, our decision would be based on how the two
+treatments performed ON AVERAGE in patients of similar, BUT NOT THE SAME risk.
+
+So, we went ahead, and looked into simple methods to do exactly that. For each
+patient with a specific risk prediction, provide them with a prediction of how
+much their risk will be reduced if they go for treatment A compared to treatment
+B.
 
 I will not go into depth about the methods we considered, as this could take
-some time. However, I will show you in this figure what our results look
-like. 
+some time. However, I will show you this figure from chapter 4, to get an idea
+what our results would look like.
 
 So in this case, we again have risk on the horizontal axis and predicted benefit
-on the vertical axis. But in this case, we see that we have continuous lines as
-opposed to single points from the previous graph.
+on the vertical axis. Each line represents one of the several methods we
+compared. So for a patient at specific risk, you could use one of these lines to
+derive how much your risk would be reduced if you opted for treatment A compared
+to treatment B.
+
+This is a short description of the contents of my thesis. How I developed
+increasingly personalized approaches that could be used to aid doctors and
+patients with their decisions.
+
+\newpage
+
+# Slide 17
+
+And with that I would like to thank you all for your attention and give the word
+back to rector magnificus.
