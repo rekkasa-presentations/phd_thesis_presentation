@@ -20,7 +20,7 @@ Risk-based approaches to medical decision making".
 # Slide 2
 
 Since we are looking at "risk-based" approaches it is important that I start
-this talk from the elaborating on risk and its prediction.
+this talk with elaborating on risk and its prediction.
 
 The notion of prediction is present in everyone's life, especially whenever a
 decision has to be made. For example, I leave around 50 kilometers away from
@@ -180,7 +180,9 @@ based on how they defined patient similarity.
 
 # Slide 10
 
-**TODO:** Make slide only about risk-based methods\
+So, in chapter 2 of this thesis we identified several such methods. The ones we
+focus on in the rest of this presentation are, what we called, the risk-based
+methods.
 
 We identified two large groups of methods.
 
@@ -213,20 +215,19 @@ approaches to the assessment of treatment effect heterogeneity.
 
 But, first, a short introduction is required. For the entirety of my PhD we were
 very lucky to have access to data of millions of patients, mainly from the US
-and Europe for our experiments. This data did not come from clinical trials, but
-rather, it was data collected from patients interacting with the healthcare
-system. For example we had access to data that health insurance companies
-collect for their insured patients, or that hospitals collect from patients they
-treat. We often call this information real-world data as opposed to data from
-clinical trials, where the setting is very tightly controlled.
+and Europe. This data did not come from clinical trials, but rather, it was data
+collected from patients interacting with the healthcare system. For example we
+had access to data that health insurance companies collect for their insured
+patients, or that hospitals collect from patients they treat. We often call this
+information real-world data as opposed to data from clinical trials, where the
+setting is very tightly controlled.
 
 This is both a blessing, and a curse. It's a blessing because we can analyze
 data of millions of people. This allows us to explore relationships between
 treatments and patient characteristics in often a lot more depth, compared to
 what we could do with clinical trials, where sample sizes are often limited.
 
-However, there are also several issues that arise from this type of
-data. Randomization which was key for easily achieving patient similarity is now
+However, randomization which was key for achieving patient similarity is now
 gone. Since this is "real world data", it means that we get to see patients
 treated by physicians that, have reason to believe that using treatment A on a
 certain patient will be better for them compared to treatment B. Hopefully, they
@@ -253,7 +254,7 @@ However there is, unfortunately another problem with this type of data. That is,
 the lack of interoperability between observational databases. In simple words,
 each database of this kind, tends to use its own way of storing patient data,
 and, therefore, if I want to use multiple of these databases, I will need to
-redesign my analysis every time, to be able to speak at its of the databases I
+redesign my analysis every time, to be able to speak to its of the databases I
 have access to.
 
 Luckily, we were able to avoid this problem by using what is the OMOP common
@@ -283,9 +284,9 @@ risk patients, both treatments work equally well.
 This framework consists of five steps. In the first step, we come up with
 definitions of what is treatment A, what is treatment B, what is the outcome of
 interest? For example, what do I need to see in the data to say that a specific
-patient had an heart attack? However, I have to make sure that my
-definitions are created in such a way, so that they can be understood from the
-OMOP common data model, our translator.
+patient had a heart attack? However, I have to make sure that my definitions are
+created in such a way, so that they can be understood from the OMOP common data
+model, our translator.
 
 Then, I can send them to databases using the common data model and extract the
 patients I need.
@@ -319,7 +320,7 @@ Without going into much detail, let's focus on the picture on the left. On the
 horizontal axis we show heart attack risk. So, as we move from the left to the
 right we see what happens to patients with higher chances of having a heart
 attack. On the vertical axis we have the absolute risk reduction, or in more
-simple terms, how much better are thiazide diuretics compared to angiotensin
+simple words, how much better are thiazide diuretics compared to angiotensin
 converting enzyme inhibitors. So, the more we move upwards, the better thiazide
 diuretics are for the prevention of a heart attack. Now each color on the plot
 represents a different database we ran our analysis.
@@ -340,34 +341,31 @@ are almost the same.
 \newpage
 
 # Slide 16
-
+<!--
 Now, even though the previous method shows us how two treatments compare in
 patients with different risks, it does not directly provide us with an answer to
 our original question. For a specific patient, which of the two treatments is
 better? Or, to make it a bit more specific, for a patient with a specific risk
 prediction, which of the two treatments is better?
+-->
 
 In the previous approach, we were still dealing with patient groups. Our
-specific patient, based on their predicted risk, would fall into one of the risk
-groups we defined and, then, our decision would be based on how the two
-treatments performed ON AVERAGE in patients of similar, BUT NOT THE SAME risk.
+specific patient, based on their predicted risk, would fall into one of these
+predefined risk groups. Then, we would make our decision based on how the two
+treatments performed on average in patients of similar, but not the same risk.
 
-So, we went ahead, and looked into simple methods to do exactly that. For each
-patient with a specific risk prediction, provide them with a prediction of how
-much their risk will be reduced if they go for treatment A compared to treatment
-B.
+So as our next step, we wanted to develop methods that would link each patient
+to a personalized prediction of benefit with treatment A compared to treatment B
+based on their risk for an outcome of interest, say heart attack.
 
-I will not go into depth about the methods we considered, as this could take
-some time. However, I will show you this figure from chapter 4, to get an idea
-what our results would look like.
+Without going into much detail, we can use a figure like this one shown in,
+chapter 4 of the thesis, to finally answer the question that has been plaguing
+us since the beginning of this presentation. Based on a specific patient's
+predicted risk for an outcome of interest, give them a personalized prediction
+of how much better they should expect to do with treatment A compared to
+treatment B.
 
-So in this case, we again have risk on the horizontal axis and predicted benefit
-on the vertical axis. Each line represents one of the several methods we
-compared. So for a patient at specific risk, you could use one of these lines to
-derive how much your risk would be reduced if you opted for treatment A compared
-to treatment B.
-
-This is a short description of the contents of my thesis. How I developed
+This has been a short description of the contents of my thesis. How I developed
 increasingly personalized approaches that could be used to aid doctors and
 patients with their decisions.
 

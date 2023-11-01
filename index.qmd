@@ -6,7 +6,7 @@ format:
     transition: fade
     theme: style.scss
     fontsize: "60px"
-    slide-number: true
+    slide-number: false
     menu: false
 fontcolor: white
 ---
@@ -41,21 +41,15 @@ fontcolor: white
 
 How likely is it for a patient with:
 
-- hypertension to experience an acute myocardial infarction?
-- COVID-19 to be admitted to the intensive care unit ?
+- hypertension to experience a heart attack?
+- COVID-19 to be admitted to the intensive care unit?
 
 :::
 
-## Prediction of healthcare outcomes {auto-animate=true background-image="images/background.png"}
+## Prediction of healthcare outcomes {background-image="images/background.png"}
 
 ![](images/cope.png)
 
-
-## Prediction of healthcare outcomes {auto-animate=true background-image="images/background.png"}
-
-![](images/cope.png){.absolute width="70%" left=0  .blare}
-
-![](images/nomogram.png){.absolute width="70%" right=0 bottom=0}
 
 
 ## Prediction of benefit {background-image="images/background.png"}
@@ -102,51 +96,18 @@ Thought process:
 
 > **Aim 1:**
 >
-> *Categorize methods available in the literatre for the prediction of benefit
+> *Categorize methods available in the literature for the prediction of benefit
 > based on their definition of patient similarity.*
 
 ## Literature review {background-image="images/background.png"}
 \
 \
-
-:::{.fragment}
-***Risk-based methods:***
-\
-Similarity is based solely on risk factors.
-:::
-
-:::{.fragment}
-\
-***Treatment effect modeling methods:***
-\
-Similiarity is based on risk factors and effect modifiers.
-
-\
-:::
-:::{.fragment}
-***Optimal treatment regimes:***
-\
-Similarity is based solely on effect modifiers.
-:::
-
-## Literature review {background-image="images/background.png"}
-\
 \
 
 ***Risk-based methods:***
 \
-Similarity is based solely on risk factors.
 
-\
-[***Treatment effect modeling methods:***]{.blare-text}
-\
-[Similiarity is based on risk factors and effect modfiers.]{.blare-text}
-
-\
-
-[***Optimal treatment regimes:***]{.blare-text}
-\
-[Similarity is based solely on effect modifiers.]{.blare-text}
+Patient similarity is based solely on risk factors.
 
 ## Risk-based methods {background-image="images/background.png"}
 \
@@ -176,14 +137,14 @@ Similarity is based solely on risk factors.
 >
 > *Lack of interoperability between observational databases.*
 
-## Standardized framework {auto-animate=true background-image="images/background.png"}
+## Standardized framework {background-image="images/background.png"}
 
 ![](images/framework.png){fig-align="center"}
 
 
-## Standardized framework {auto-animate=true background-image="images/background.png"}
+## Standardized framework {background-image="images/background.png"}
 
-![](images/framework-main.png){.absolute fig.align="center"}
+![](images/framework-main-small.png){fig-align="center"}
 
 
 
@@ -193,14 +154,6 @@ Similarity is based solely on risk factors.
 
 ![](images/gusto.png){fig-align="center"}
  
-## Future research {auto-animate=true background-image="images/background.png"}
-\
-\
-
-- Extend the literature review
-- Large-scale application of our suggested framework
-- Risk-based benefit prediction in the observational setting
-
 ## {background-image="images/last-slide.png"}
 \
 \
